@@ -117,6 +117,7 @@ const ImageUploadForm = () => {
       formData.append("username", data.username);
       formData.append("password", data.password);
       formData.append("type", data.type);
+      formData.append("title", data.title);
       console.log(formData);
 
       try {
@@ -134,6 +135,7 @@ const ImageUploadForm = () => {
             document.getElementById("username").value = "";
             document.getElementById("password").value = "";
             document.getElementById("type").value = "";
+            document.getElementById("title").value = "";
           }
 
        
@@ -150,6 +152,7 @@ const ImageUploadForm = () => {
            document.getElementById("username").value = "";
            document.getElementById("password").value = "";
            document.getElementById("type").value = "";
+           document.getElementById("title").value = "";
         }
       }
   };
@@ -162,6 +165,11 @@ const ImageUploadForm = () => {
           <Label htmlFor="image">Image</Label>
           <Input type="file" id="image" {...register('image', { required: true })} />
           {errors.image && <ErrorMessage>Image is required</ErrorMessage>}
+        </FormField>
+        <FormField>
+          <Label htmlFor="title">Title</Label>
+          <Input type="text" id="title" {...register('title', { required: true })} />
+          {errors.title && <ErrorMessage>Title is required</ErrorMessage>}
         </FormField>
         <FormField>
           <Label htmlFor="description">Description</Label>
