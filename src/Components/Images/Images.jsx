@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import image from "../../assets/img_passport.jpg";
 import "./Images.css";
 import { useNavigate } from 'react-router-dom';
 
