@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import ImageUploadForm from "./Components/ImageUploadForm";
+import {Routes,Route} from "react-router-dom";
+import Images from "./Components/Images/Images"
 
 function App() {
 
@@ -42,7 +44,11 @@ function App() {
 
   return (
     <>
-      <ImageUploadForm />
+    <Routes>
+      <Route path="/" element={<Images/>} />
+      <Route path="/upload" element={<ImageUploadForm />}/>
+    </Routes>
+      {/* <ImageUploadForm /> */}
     </>
   )
 }
