@@ -121,8 +121,7 @@ const ImageUploadForm = () => {
       console.log(formData);
 
       try {
-        //https://file-upload-backend-iota.vercel.app/upload
-         await axios.post("http://localhost:8000/upload",formData,{
+         await axios.post("https://file-upload-backend-p3em.vercel.app/upload",formData,{
           headers: {
             "Content-Type": "multipart/form-data",
           },
